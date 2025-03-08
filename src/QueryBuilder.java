@@ -1,5 +1,3 @@
-
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -82,6 +80,7 @@ public class QueryBuilder {
         if (where != null) queryParts.add("WHERE " + where);
         if (groupBy != null) queryParts.add("GROUP BY " + groupBy);
         if (orderBy != null) queryParts.add("ORDER BY " + orderBy);
+        queryParts.add(";");
 
         return String.join(" ", queryParts);
     }
